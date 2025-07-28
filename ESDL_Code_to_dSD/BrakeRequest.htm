@@ -1,0 +1,1095 @@
+<html>
+<head>
+<title>
+Titel: Documentation Autor: ETAS Sicht: view</title>
+</head>
+<h1> CustomerLibrary </h1> 
+ <ul> 
+ </ul> 
+<h1> PlatformLibrary </h1> 
+ <ul> 
+<li><a href="#kap1">BrakeRequest</a>
+ </ul> 
+<body>
+<hr>
+<h1> CustomerLibrary </h1> 
+<hr>
+<h1> PlatformLibrary </h1> 
+<h2>  <a name="kap1">BrakeRequest</a> </h2> 
+ <table> 
+ <tr> 
+ <th>  </th> 
+ <th>  </th> 
+ <th>  </th> 
+ <th>  </th> 
+ </tr> 
+ <tr >
+ <td> Library </td> 
+ <td> : </td> 
+ <td> Component Library </td> 
+ <td> PlatformLibrary </td> 
+ </tr >
+ <tr >
+ <td> Entry </td> 
+ <td> : </td> 
+ <td> Component </td> 
+ <td> BrakeRequest </td> 
+ </tr >
+ </table> 
+<br>Path:
+PlatformLibrary/Package/AntiLockController/Private/SMC/Vehicle/SignalPreprocessing/BrakeRequest
+<br>Version:
+Version 5.2
+<br>Notes:
+ASCET-SCM-TCM
+
+ <pre> 
+<VersionInfos>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.2</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2023-11-28T18:44:04</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.1</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2023-06-22T11:09:47</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.0.614.3</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2021-01-27T09:44:54</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.0.614.2</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2021-01-22T09:07:07</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.0.614.1</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2020-11-24T11:26:05</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.0.614.0</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2020-01-22T19:01:18</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>5.0</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2019-06-12T21:15:37</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>4.3.614.0</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2018-11-15T13:01:24</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>BrakeRequest</Name>
+    <Number>4.3</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm02i88001m870c708kpjj8crg</Oid>
+    <Timestamp>2012-05-30T20:43:20</Timestamp>
+  </VersionInfo>
+</VersionInfos>
+ </pre> 
+<h3> Layout </h3> 
+<IMG SRC=BrakeRequest_1.gif>
+<br>Figure 1: Layout of Class BrakeRequest
+<br><h3> Elements </h3> 
+ <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Value </th> 
+ <th> Unit </th> 
+ <th> Modeltype </th> 
+ <th> Kind </th> 
+ <th> Dimension </th> 
+ </tr> 
+ <tr >
+ <td> b0 </td> 
+ <td>  </td> 
+ <td> - </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeFully_Request </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS_hyd </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Driver </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqstDriver_Invalid </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> dP_BrakeFully </td> 
+ <td>  </td> 
+ <td> bar </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> PMc_BrakeRequest </td> 
+ <td>  </td> 
+ <td> bar </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_BrakeRequest </td> 
+ <td>  </td> 
+ <td> bar </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_F </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_hyd </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ </table> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Memory </th> 
+ <th> Comment </th> 
+ </tr> 
+ <tr >
+ <td> b0 </td> 
+ <td> nv </td> 
+ <td> filter coefficient </td> 
+ </tr >
+ <tr >
+ <td> BrakeFully_Request </td> 
+ <td> v </td> 
+ <td> evaluation of  Brake Request about pMc, pTgtVeh or BLS </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS </td> 
+ <td> v </td> 
+ <td> evaluation of  Brake Request about pMc, pTgtVeh or BLS </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS_hyd </td> 
+ <td> v </td> 
+ <td> evaluation of  Brake Request about pMc, pTgtVeh or BLS </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Driver </td> 
+ <td> v </td> 
+ <td> evaluation of  Brake Request about pMc, pTgtVeh or BLS </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqstDriver_Invalid </td> 
+ <td> v </td> 
+ <td> Brake Request ABS is usable (minimum one signal valid), 1 = valid, 0 = invalid </td> 
+ </tr >
+ <tr >
+ <td> dP_BrakeFully </td> 
+ <td> nv </td> 
+ <td> Master Cylinder Pressure threashold for BLS detection </td> 
+ </tr >
+ <tr >
+ <td> PMc_BrakeRequest </td> 
+ <td> nv </td> 
+ <td> Master Cylinder Pressure threashold for BLS detection </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_BrakeRequest </td> 
+ <td> nv </td> 
+ <td> pTarget Vehicle Pressure threashold for BLS detection </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_F </td> 
+ <td> v </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_hyd </td> 
+ <td> v </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br><h3> Imported Elements </h3> 
+ <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Value </th> 
+ <th> Unit </th> 
+ <th> Modeltype </th> 
+ <th> Kind </th> 
+ <th> Dimension </th> 
+ </tr> 
+ <tr >
+ <td> BrakeRequest_ABS_dpFullBraking </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_PMc </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_pTgtVeh </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_T_Filt_pTgtVeh </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> dT_Radsignale </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ </table> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Memory </th> 
+ <th> Comment </th> 
+ </tr> 
+ <tr >
+ <td> BrakeRequest_ABS_dpFullBraking </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_PMc </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_pTgtVeh </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> BrakeRequest_ABS_T_Filt_pTgtVeh </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> dT_Radsignale </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br><h3> Public Methods </h3> 
+ <strong> BrakeFully_Request () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/BrakeFully_Request </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> ABS Brake Fully Request (strong braking) </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> BrakeRqst_ABS () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/BrakeRqst_ABS </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> ABS Brake Request </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> BrakeRqst_ABS_hyd () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/BrakeRqst_ABS_hyd </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> ABS Brake Request </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> BrakeRqst_Driver () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/BrakeRqst_Driver </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Braking request by driver </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> BrakeRqstDriver_Invalid () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/BrakeRqstDriver_Invalid </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Braking request by driver, quality signal </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> calc (BLS::log; FBLS::log; pMc::cont; pMc_available::log; pTgtVeh::cont; pTgtVeh_Enable::log; BrakeRqst_Parking::log; p_Model_FL::cont; p_Model_FR::cont; pTgtHydFA::cont; pTgtHydRA::cont)  </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> BLS/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Brake Light Switch </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> FBLS/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Failure Brake Light Switch detected </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pMc/calc </td> 
+ <td> cont </td> 
+ <td> bar </td> 
+ <td> Master Cylinder Pressure </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pMc_available/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> availability Master Cylinder pressure sensor </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh/calc </td> 
+ <td> cont </td> 
+ <td> bar </td> 
+ <td> Brake Request by LDM </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_Enable/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> HAL Enable of Brake Request by LDM </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Parking/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Driver actuates parking brake </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> p_Model_FL/calc </td> 
+ <td> cont </td> 
+ <td> bar </td> 
+ <td> pressure model front left </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> p_Model_FR/calc </td> 
+ <td> cont </td> 
+ <td> --- </td> 
+ <td> pressure model front right </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pTgtHydFA/calc </td> 
+ <td> cont </td> 
+ <td> bar </td> 
+ <td> --- </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> pTgtHydRA/calc </td> 
+ <td> cont </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ </table> 
+<br> <strong> pTgtVeh_F () return::cont </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/pTgtVeh_F </td> 
+ <td> cont </td> 
+ <td> bar </td> 
+ <td> --- </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br><h3> ESDL Description </h3> 
+ <pre> 
+BrakeFully_Request () return::log {
+return BrakeFully_Request;
+
+}
+ </pre> 
+
+ <pre> 
+BrakeRqst_ABS () return::log {
+return BrakeRqst_ABS;
+}
+ </pre> 
+
+ <pre> 
+BrakeRqst_ABS_hyd () return::log {
+return BrakeRqst_ABS_hyd;
+}
+ </pre> 
+
+ <pre> 
+BrakeRqst_Driver () return::log {
+return BrakeRqst_Driver;
+}
+ </pre> 
+
+ <pre> 
+BrakeRqstDriver_Invalid () return::log {
+return BrakeRqstDriver_Invalid;
+
+}
+ </pre> 
+
+ <pre> 
+calc (BLS::log;FBLS::log;pMc::cont;pMc_available::log;pTgtVeh::cont;pTgtVeh_Enable::log;BrakeRqst_Parking::log;p_Model_FL::cont;p_Model_FR::cont;pTgtHydFA::cont;pTgtHydRA::cont)  {
+
+// Detection of brake request with dependency of BLS, pMc or pTgtVeh for product ESP
+// Because of either the driver or the brake system with active pressure build up have a brake demand. 
+
+BrakeRqst_Driver = (  (pMc_available &amp;&amp; pMc &gt; PMc_BrakeRequest) ||
+                      (!FBLS &amp;&amp; BLS) ||
+                      (BrakeRqst_Parking)
+                   );
+
+// if pMc and BLS not usable (invalid), BrakeRqstDriver_Invalid = true
+BrakeRqstDriver_Invalid = (!pMc_available &amp;&amp; FBLS);
+
+// Brake request evaluation for system
+BrakeRqst_ABS = ( (BrakeRqst_Driver) ||
+                  (pTgtVeh_Enable &amp;&amp;  pTgtVeh &gt; pTgtVeh_BrakeRequest)
+                );
+
+
+pTgtVeh_hyd = (pTgtHydFA.max(pTgtHydRA));
+
+
+// Brake request evaluation for system HYD
+BrakeRqst_ABS_hyd = ( (BrakeRqst_Driver) ||
+                  (pTgtVeh_Enable &amp;&amp;  pTgtVeh_hyd &gt; pTgtVeh_BrakeRequest)
+                );
+
+// Detection if maximum deceleration is demanded (BrakeFully_Request)
+if (pTgtVeh &gt; pTgtVeh_F)
+{
+	pTgtVeh_F = pTgtVeh_F + b0 * (pTgtVeh - pTgtVeh_F);
+}
+else
+{
+	pTgtVeh_F = pTgtVeh;
+}
+
+BrakeFully_Request = (pMc_available &amp;&amp; pMc.max(pTgtVeh_F) &gt; ( p_Model_FL.max(p_Model_FR) + dP_BrakeFully )  ) ;
+
+}
+ </pre> 
+
+ <pre> 
+pTgtVeh_F () return::cont {
+return pTgtVeh_F;
+}
+ </pre> 
+
+<h3> Data </h3> 
+Name: Data [DEFAULT]
+<br>Notes:
+---<br><br><br>Elements:
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Component </th> 
+ <th> Data </th> 
+ </tr> 
+ <tr >
+ <td> b0 </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> BrakeFully_Request </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS_hyd </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Driver </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqstDriver_Invalid </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> dP_BrakeFully </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> PMc_BrakeRequest </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_BrakeRequest </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_F </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_hyd </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ </table> 
+<br><h3> Implementations </h3> 
+Name: Impl [DEFAULT]
+<br>Notes:
+---<br><br><br>Elements:
+<br> <table border> 
+ <tr> 
+ <th colspan=1> Name </th> 
+ <th colspan=4> Model(M) </th> 
+ <th colspan=1> Formula </th> 
+ <th colspan=3> Implementation(I) </th> 
+ <th colspan=2> Others </th> 
+ </tr> 
+ <tr> 
+ <th>  </th> 
+ <th> Type </th> 
+ <th> Min. </th> 
+ <th> Max. </th> 
+ <th> Q. </th> 
+ <th> M=a*I+b </th> 
+ <th> Type </th> 
+ <th> Min. </th> 
+ <th> Max. </th> 
+ <th> Add.Info </th> 
+ </tr> 
+ <tr >
+ <td> b0 </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ <td> 1 </td> 
+ <td> 3.0517578125e-5 </td> 
+ <td> P32768 </td> 
+ <td> uint16 </td> 
+ <td> 0 </td> 
+ <td> 32768 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BLS/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeFully_Request </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bool </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bool </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_ABS_hyd </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bool </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Driver </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bool </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqst_Parking/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> BrakeRqstDriver_Invalid </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bool </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> dP_BrakeFully </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> FBLS/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> p_Model_FL/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> p_Model_FR/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pMc/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pMc_available/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> PMc_BrakeRequest </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtHydFA/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtHydRA/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh/calc </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_BrakeRequest </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_Enable/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_F </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> pTgtVeh_hyd </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/BrakeFully_Request </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/BrakeRqst_ABS </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/BrakeRqst_ABS_hyd </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/BrakeRqst_Driver </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/BrakeRqstDriver_Invalid </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> bit </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/pTgtVeh_F </td> 
+ <td> cont </td> 
+ <td> -20.0 </td> 
+ <td> 400.0 </td> 
+ <td> 0.03125 </td> 
+ <td> Pressure_normal </td> 
+ <td> sint16 </td> 
+ <td> -640 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ </tr >
+ </table>  <br> 
+</body>
+</html>

@@ -1,0 +1,23 @@
+Input files
+1) **\[item_name].htm: html description of ESDL item
+2) **\template.xml: template file for dSD (detailed design document)
+
+Output file:
+1) **\[item_name]_ml_fs.xml: dSD based on input files
+
+Example files:
+1) **\Example\[example_item_name].htm: html description of ESDL example_item_name
+2) **\Example\[example_item_name]_ml_fs.xml: dSD for \Example\[example_item_name].htm
+
+Tasks:
+1) Rename template file into output file, then only update the followings
+    - Long name of the item
+    - Short name of the item
+    - Description of Overview in Design Overview
+    - Description of dSD
+    - Description of Calc_Method_Description, following format in **\Example\[example_item_name]_ml_fs.xml strictly
+    
+Requirements:
+- Files in Example folder is for reference example.
+- Input and output files are put in the same folder with this task_description.txt file.
+- Calc_Method_Description is the description for core calculation in ESDL logic

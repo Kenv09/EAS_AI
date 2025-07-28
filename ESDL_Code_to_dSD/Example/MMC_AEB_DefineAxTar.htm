@@ -1,0 +1,799 @@
+<html>
+<head>
+<title>
+Titel: Documentation Autor: ETAS Sicht: view</title>
+</head>
+<h1> Customer </h1> 
+ <ul> 
+<li><a href="#kap1">MMC_AEB_DefineAxTar</a>
+ </ul> 
+<body>
+<hr>
+<h1> Customer </h1> 
+<h2>  <a name="kap1">MMC_AEB_DefineAxTar</a> </h2> 
+ <table> 
+ <tr> 
+ <th>  </th> 
+ <th>  </th> 
+ <th>  </th> 
+ <th>  </th> 
+ </tr> 
+ <tr >
+ <td> Library </td> 
+ <td> : </td> 
+ <td> Component Library </td> 
+ <td> Customer </td> 
+ </tr >
+ <tr >
+ <td> Entry </td> 
+ <td> : </td> 
+ <td> Component </td> 
+ <td> MMC_AEB_DefineAxTar </td> 
+ </tr >
+ </table> 
+<br>Path:
+Customer/MMC/Package/LDM/FCM/MMC_AEB_DefineAxTar
+<br>Version:
+Version 1.0.143.0
+<br>Notes:
+ASCET-SCM-TCM
+
+ <pre> 
+<VersionInfos>
+  <VersionInfo>
+    <Name>MMC_AEB_DefineAxTar</Name>
+    <Number>1.0.143.0</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040g000000873pg718825bfdu1300</Oid>
+    <Timestamp>2023-05-31T11:13:43</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>MMC_AEB_DefineAxTar</Name>
+    <Number>1.0</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040g000000873pg718825bfdu1300</Oid>
+    <Timestamp>2022-10-18T10:00:57</Timestamp>
+  </VersionInfo>
+  <VersionInfo>
+    <Name>AEB_DefineAxTar</Name>
+    <Number>4.2</Number>
+    <State>version</State>
+    <Valid>yes</Valid>
+    <Oid>040qm00100001m8714ag6p1bd2n1i</Oid>
+    <Timestamp>2011-11-14T07:22:04</Timestamp>
+  </VersionInfo>
+</VersionInfos>
+ </pre> 
+<h3> Layout </h3> 
+<IMG SRC=MMC_AEB_DefineAxTar_1.gif>
+<br>Figure 1: Layout of Class MMC_AEB_DefineAxTar
+<br><h3> Elements </h3> 
+ <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Value </th> 
+ <th> Unit </th> 
+ <th> Modeltype </th> 
+ <th> Kind </th> 
+ <th> Dimension </th> 
+ </tr> 
+ <tr >
+ <td> AEB_axTar </td> 
+ <td>  </td> 
+ <td> m/s� </td> 
+ <td> cont </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> AEBFullBrake </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> AebPartialBrake </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> log </td> 
+ <td> var </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMin </td> 
+ <td>  </td> 
+ <td> m/s� </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinThreshold </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithPartialBrake </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithTrailer </td> 
+ <td>  </td> 
+ <td> m/s� </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxPartialBrake </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxThreshold </td> 
+ <td>  </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ </table> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Memory </th> 
+ <th> Comment </th> 
+ </tr> 
+ <tr >
+ <td> AEB_axTar </td> 
+ <td> v </td> 
+ <td> AEB-target acceleration </td> 
+ </tr >
+ <tr >
+ <td> AEBFullBrake </td> 
+ <td> v </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> AebPartialBrake </td> 
+ <td> v </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMin </td> 
+ <td> nv </td> 
+ <td> Maximum deceleration. </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinThreshold </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithPartialBrake </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithTrailer </td> 
+ <td> nv </td> 
+ <td> Maximum deceleration if a trailer is connected. </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxPartialBrake </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxThreshold </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br><h3> Imported Elements </h3> 
+ <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Value </th> 
+ <th> Unit </th> 
+ <th> Modeltype </th> 
+ <th> Kind </th> 
+ <th> Dimension </th> 
+ </tr> 
+ <tr >
+ <td> P_AEB_axTarMin </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinThreshold </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinWithPartialBrake </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinWithTrailer </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_VxPartialBrake </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_VxThreshold </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> cont </td> 
+ <td> par </td> 
+ <td> scalar </td> 
+ </tr >
+ </table> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Memory </th> 
+ <th> Comment </th> 
+ </tr> 
+ <tr >
+ <td> P_AEB_axTarMin </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinThreshold </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinWithPartialBrake </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_axTarMinWithTrailer </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_VxPartialBrake </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ <tr >
+ <td> P_AEB_VxThreshold </td> 
+ <td> nv </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br><h3> Public Methods </h3> 
+ <strong> AEB_axTar () return::cont </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/AEB_axTar </td> 
+ <td> cont </td> 
+ <td> m/s� </td> 
+ <td> Target acceleration </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> AebPartialBrake () return::log </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> return/AebPartialBrake </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Indicate that AEB-IB Partial Brake is active </td> 
+ <td> ret </td> 
+ <td> --- </td> 
+ </tr >
+ </table> 
+<br> <strong> calc (ACCAEBDecCtrlAct::log; ACCAEBaxTar::cont; TrailerConnected::log; VxAct::cont; FCM_AUTO_BRK_PAR_RQ::log; FCM_BRK_ASSIST_RQ::log; AEBBAActive::log; AEBIBActive::log)  </strong> 
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Type </th> 
+ <th> Unit </th> 
+ <th> Comment </th> 
+ <th> Kind </th> 
+ <th> Direction </th> 
+ </tr> 
+ <tr >
+ <td> ACCAEBDecCtrlAct/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Standard activation bit for AEB </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> ACCAEBaxTar/calc </td> 
+ <td> cont </td> 
+ <td> m/s� </td> 
+ <td> Standard target deceleration </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> TrailerConnected/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> Indication that trailer is connected. </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> VxAct/calc </td> 
+ <td> cont </td> 
+ <td> m/s </td> 
+ <td> Actual longitudinal velocity </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> FCM_AUTO_BRK_PAR_RQ/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> FCM_BRK_ASSIST_RQ/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> --- </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> AEBBAActive/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> AEBBAActive </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ <tr >
+ <td> AEBIBActive/calc </td> 
+ <td> log </td> 
+ <td> --- </td> 
+ <td> AEBIBActive </td> 
+ <td> arg </td> 
+ <td> In </td> 
+ </tr >
+ </table> 
+<br><h3> ESDL Description </h3> 
+ <pre> 
+AEB_axTar () return::cont {
+return AEB_axTar;
+}
+ </pre> 
+
+ <pre> 
+AebPartialBrake () return::log {
+return AebPartialBrake;
+}
+ </pre> 
+
+ <pre> 
+calc (ACCAEBDecCtrlAct::log;ACCAEBaxTar::cont;TrailerConnected::log;VxAct::cont;FCM_AUTO_BRK_PAR_RQ::log;FCM_BRK_ASSIST_RQ::log;AEBBAActive::log;AEBIBActive::log)  {
+/* Define target deceleration AEB_axTar from DAS signals: */
+/* Priority order is:                                     */
+/* 1. Customer specific deceleration request AEBaxTarCus  */
+
+/* Customer specific decleration request: */
+if ((ACCAEBDecCtrlAct) || (AEBBAActive) || (AEBIBActive))
+{
+	AEB_axTar = ACCAEBaxTar;
+}
+else
+{
+	AEB_axTar = 0.0;	
+}
+/* If a trailer is connected, the deceleration must be limited, because */
+/* too high decelerations could destabilize the trailer. */
+if (TrailerConnected) // No trailer in MMC project then disable by setting FALSE
+{
+	AEB_axTar = AEB_axTar.max(C_AEB_axTarMinWithTrailer);
+}
+
+if( AEBBAActive &amp;&amp;(VxAct &gt;= C_AEB_VxThreshold)) // BA &amp; vehicle speed &gt;=100 kph
+{
+	AEBFullBrake= false;
+	AebPartialBrake = false;
+	AEB_axTar = AEB_axTar.max(C_AEB_axTarMinThreshold);	
+}
+/* AEB IB handling */
+else if (AEBIBActive)
+{
+	if(((ACCAEBDecCtrlAct == true)&amp;&amp;(FCM_AUTO_BRK_PAR_RQ == false)&amp;&amp; (FCM_BRK_ASSIST_RQ == false) &amp;&amp; (VxAct &lt;= C_AEB_VxPartialBrake))|| //Case: Trigger AEB IB FULL or from BA to IB FULL
+		(AEBFullBrake== true))// Case:AEB IB FULL is activating.
+	{
+		AEBFullBrake= true;
+		AebPartialBrake = false;
+		AEB_axTar = AEB_axTar.max(C_AEB_axTarMin);		
+	}
+	else /* Otherwise: Trigger AEB IB Partial or from BA to IB Partial  */
+	{
+		AEBFullBrake= false;
+		AebPartialBrake = true;
+		AEB_axTar = AEB_axTar.max(C_AEB_axTarMinWithPartialBrake);
+	}
+}	
+else
+{
+	AEBFullBrake= false;
+	AebPartialBrake = false;
+	AEB_axTar = AEB_axTar.max(C_AEB_axTarMin);
+}
+/* Limit AEB_axTar to decelerating values: */
+AEB_axTar = AEB_axTar.min(0.0);
+
+}
+ </pre> 
+
+<h3> Data </h3> 
+Name: Data [DEFAULT]
+<br>Notes:
+---<br><br><br>Elements:
+<br> <table border> 
+ <tr> 
+ <th> Name </th> 
+ <th> Component </th> 
+ <th> Data </th> 
+ </tr> 
+ <tr >
+ <td> AEB_axTar </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> AEBFullBrake </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> AebPartialBrake </td> 
+ <td> log </td> 
+ <td> false </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMin </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinThreshold </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithPartialBrake </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithTrailer </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxPartialBrake </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxThreshold </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ </tr >
+ </table> 
+<br><h3> Implementations </h3> 
+Name: Impl [DEFAULT]
+<br>Notes:
+---<br><br><br>Elements:
+<br> <table border> 
+ <tr> 
+ <th colspan=1> Name </th> 
+ <th colspan=4> Model(M) </th> 
+ <th colspan=1> Formula </th> 
+ <th colspan=3> Implementation(I) </th> 
+ <th colspan=2> Others </th> 
+ </tr> 
+ <tr> 
+ <th>  </th> 
+ <th> Type </th> 
+ <th> Min. </th> 
+ <th> Max. </th> 
+ <th> Q. </th> 
+ <th> M=a*I+b </th> 
+ <th> Type </th> 
+ <th> Min. </th> 
+ <th> Max. </th> 
+ <th> Add.Info </th> 
+ </tr> 
+ <tr >
+ <td> ACCAEBaxTar/calc </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> ACCAEBDecCtrlAct/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> AEB_axTar </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> AEBBAActive/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> AEBFullBrake </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> AEBIBActive/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> AebPartialBrake </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMin </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinThreshold </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 0.0078125 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithPartialBrake </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_axTarMinWithTrailer </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxPartialBrake </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ <td> 100.0 </td> 
+ <td> 0.0078125 </td> 
+ <td> Velocity_fine </td> 
+ <td> sint16 </td> 
+ <td> 0 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> C_AEB_VxThreshold </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ <td> 100.0 </td> 
+ <td> 0.0078125 </td> 
+ <td> Velocity_fine </td> 
+ <td> sint16 </td> 
+ <td> 0 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> FCM_AUTO_BRK_PAR_RQ/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> FCM_BRK_ASSIST_RQ/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/AEB_axTar </td> 
+ <td> cont </td> 
+ <td> -32.0 </td> 
+ <td> 0.0 </td> 
+ <td> 8.0 </td> 
+ <td> Acceleration_finest </td> 
+ <td> sint16 </td> 
+ <td> -32768 </td> 
+ <td> 0 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> return/AebPartialBrake </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> TrailerConnected/calc </td> 
+ <td> log </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td> 1 </td> 
+ <td> ident </td> 
+ <td> uint8 </td> 
+ <td> 0 </td> 
+ <td> 1 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ <td> VxAct/calc </td> 
+ <td> cont </td> 
+ <td> 0.0 </td> 
+ <td> 100.0 </td> 
+ <td> 0.0078125 </td> 
+ <td> Velocity_fine </td> 
+ <td> sint16 </td> 
+ <td> 0 </td> 
+ <td> 12800 </td> 
+ <td>  </td> 
+ </tr >
+ <tr >
+ </tr >
+ </table>  <br> 
+</body>
+</html>
