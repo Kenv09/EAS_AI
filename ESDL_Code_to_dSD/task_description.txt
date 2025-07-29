@@ -20,4 +20,7 @@ Tasks:
 Requirements:
 - Files in Example folder is for reference example.
 - Input and output files are put in the same folder with this task_description.txt file.
-- Calc_Method_Description is the description for core calculation in ESDL logic
+- Calc_Method_Description is the description for core calculation in ESDL logic.
+- Only update requested parts as described in Tasks, do not update other parts. 
+  For example, in  Design Decisions, it is not requested in Tasks, 
+  so do not remove the template placeholders in Design Decisions.
