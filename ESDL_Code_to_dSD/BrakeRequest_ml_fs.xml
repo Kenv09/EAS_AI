@@ -53,7 +53,7 @@
 					 </LONG-NAME> 
 					 <SHORT-NAME>Overview</SHORT-NAME> 
 					 <P> 
-						<L-1 L="en">Detection of brake request with dependency of BLS, pMc or pTgtVeh for product ESP. Evaluates brake requests from driver and system to generate brake request signals for ABS and hydraulic systems.
+						<L-1 L="en">This class detects brake request with dependency of BLS, pMc or pTgtVeh for product ESP. Because of either the driver or the brake system with active pressure build up have a brake demand.
 						</L-1> 
 					 </P> 
 					 <P> 
@@ -96,7 +96,7 @@
 					 </LONG-NAME> 
 					 <SHORT-NAME>dSD</SHORT-NAME> 
 					 <P> 
-						<L-1 L="en">This class detects brake requests from multiple sources including driver inputs (brake light switch BLS, master cylinder pressure pMc) and system requests (target pressure pTgtVeh). It generates brake request signals for ABS and hydraulic brake systems, and determines if maximum deceleration (BrakeFully) is requested.
+						<L-1 L="en">This class implements the logic for detecting brake requests from different sources including driver input through brake lights (BLS), master cylinder pressure (pMc), and target vehicle pressure (pTgtVeh). It evaluates brake requests for both standard ABS system and hydraulic systems, and detects when maximum deceleration is demanded.
 						</L-1> 
 					 </P> 
 					 <P> 
@@ -118,61 +118,109 @@
 						</LONG-NAME> 
 						<SHORT-NAME>Calc_Method_Description</SHORT-NAME> 
 						<P> 
-						  <L-1 L="en">Calculate <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> based on brake light switch, master cylinder pressure, and parking brake request</L-1> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">pMc_available</TT> is equal to true and <TT TYPE="SW-VARIABLE">pMc</TT> is greater than <TT TYPE="SW-CALPRM">PMc_BrakeRequest</TT></L-1> 
 						</P> 
 						<P> 
-						  <L-1 L="en">Set <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> to true if any of the following conditions are met:</L-1> 
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">pMc_available</TT> is true AND <TT TYPE="SW-VARIABLE">pMc</TT> is greater than <TT TYPE="SW-CALPRM">PMc_BrakeRequest</TT></L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">FBLS</TT> is false AND <TT TYPE="SW-VARIABLE">BLS</TT> is true</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">BrakeRqst_Parking</TT> is true</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Set <TT TYPE="SW-VARIABLE">BrakeRqstDriver_Invalid</TT> to true if <TT TYPE="SW-VARIABLE">pMc_available</TT> is false AND <TT TYPE="SW-VARIABLE">FBLS</TT> is true</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Calculate <TT TYPE="SW-VARIABLE">BrakeRqst_ABS</TT> by setting it to true if:</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> is true</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - OR (<TT TYPE="SW-VARIABLE">pTgtVeh_Enable</TT> is true AND <TT TYPE="SW-VARIABLE">pTgtVeh</TT> is greater than <TT TYPE="SW-CALPRM">pTgtVeh_BrakeRequest</TT>)</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Calculate <TT TYPE="SW-VARIABLE">pTgtVeh_hyd</TT> as the maximum of <TT TYPE="SW-VARIABLE">pTgtHydFA</TT> and <TT TYPE="SW-VARIABLE">pTgtHydRA</TT></L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Calculate <TT TYPE="SW-VARIABLE">BrakeRqst_ABS_hyd</TT> by setting it to true if:</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> is true</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - OR (<TT TYPE="SW-VARIABLE">pTgtVeh_Enable</TT> is true AND <TT TYPE="SW-VARIABLE">pTgtVeh_hyd</TT> is greater than <TT TYPE="SW-CALPRM">pTgtVeh_BrakeRequest</TT>)</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Calculate filtered target pressure <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> using first-order filter:</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - If <TT TYPE="SW-VARIABLE">pTgtVeh</TT> is greater than <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT>, apply filter: <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> = <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> + <TT TYPE="SW-CALPRM">b0</TT> * (<TT TYPE="SW-VARIABLE">pTgtVeh</TT> - <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT>)</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - Otherwise, set <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> = <TT TYPE="SW-VARIABLE">pTgtVeh</TT></L-1>
-						</P>
-						<P>
-						  <L-1 L="en">Calculate <TT TYPE="SW-VARIABLE">BrakeFully_Request</TT> by setting it to true if:</L-1>
-						</P>
-						<P>
-						  <L-1 L="en">        - <TT TYPE="SW-VARIABLE">pMc_available</TT> is true AND maximum of <TT TYPE="SW-VARIABLE">pMc</TT> and <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> is greater than (maximum of <TT TYPE="SW-VARIABLE">p_Model_FL</TT> and <TT TYPE="SW-VARIABLE">p_Model_FR</TT> plus <TT TYPE="SW-CALPRM">dP_BrakeFully</TT>)</L-1>
+						  <L-1 L="en">            OR (<TT TYPE="SW-VARIABLE">FBLS</TT> is equal to false and <TT TYPE="SW-VARIABLE">BLS</TT> is equal to true)</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">            OR (<TT TYPE="SW-VARIABLE">BrakeRqst_Parking</TT> is equal to true)</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> to true <TT TYPE="DesignAspectId">dSD0</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> to false <TT TYPE="DesignAspectId">dSD1</TT></L-1> 
 						</P> 
 						<P> 
 						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">pMc_available</TT> is equal to false and <TT TYPE="SW-VARIABLE">FBLS</TT> is equal to true</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqstDriver_Invalid</TT> to true <TT TYPE="DesignAspectId">dSD2</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqstDriver_Invalid</TT> to false <TT TYPE="DesignAspectId">dSD3</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> is equal to true</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">            OR (<TT TYPE="SW-VARIABLE">pTgtVeh_Enable</TT> is equal to true and <TT TYPE="SW-VARIABLE">pTgtVeh</TT> is greater than <TT TYPE="SW-CALPRM">pTgtVeh_BrakeRequest</TT>)</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_ABS</TT> to true <TT TYPE="DesignAspectId">dSD4</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_ABS</TT> to false <TT TYPE="DesignAspectId">dSD5</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Set <TT TYPE="SW-VARIABLE">pTgtVeh_hyd</TT> to the maximum between <TT TYPE="SW-VARIABLE">pTgtHydFA</TT> and <TT TYPE="SW-VARIABLE">pTgtHydRA</TT> <TT TYPE="DesignAspectId">dSD6</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">BrakeRqst_Driver</TT> is equal to true</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">            OR (<TT TYPE="SW-VARIABLE">pTgtVeh_Enable</TT> is equal to true and <TT TYPE="SW-VARIABLE">pTgtVeh_hyd</TT> is greater than <TT TYPE="SW-CALPRM">pTgtVeh_BrakeRequest</TT>)</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_ABS_hyd</TT> to true <TT TYPE="DesignAspectId">dSD7</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeRqst_ABS_hyd</TT> to false <TT TYPE="DesignAspectId">dSD8</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">pTgtVeh</TT> is greater than <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> to <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> + <TT TYPE="SW-CALPRM">b0</TT> * (<TT TYPE="SW-VARIABLE">pTgtVeh</TT> - <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT>) <TT TYPE="DesignAspectId">dSD9</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> to <TT TYPE="SW-VARIABLE">pTgtVeh</TT> <TT TYPE="DesignAspectId">dSD10</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en"></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Check if <TT TYPE="SW-VARIABLE">pMc_available</TT> is equal to true and the maximum between <TT TYPE="SW-VARIABLE">pMc</TT> and <TT TYPE="SW-VARIABLE">pTgtVeh_F</TT> is greater than the maximum between <TT TYPE="SW-VARIABLE">p_Model_FL</TT> and <TT TYPE="SW-VARIABLE">p_Model_FR</TT> plus <TT TYPE="SW-CALPRM">dP_BrakeFully</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeFully_Request</TT> to true <TT TYPE="DesignAspectId">dSD11</TT></L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">Otherwise,</L-1> 
+						</P> 
+						<P> 
+						  <L-1 L="en">        Set <TT TYPE="SW-VARIABLE">BrakeFully_Request</TT> to false <TT TYPE="DesignAspectId">dSD12</TT></L-1> 
 						</P> 
 						<CHAPTER SI="Interface_calc"> 
 						  <LONG-NAME> 

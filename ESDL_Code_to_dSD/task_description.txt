@@ -16,6 +16,7 @@ Tasks:
     - Description of Overview in Design Overview
     - Description of dSD
     - Description of Calc_Method_Description, following format in **\Example\[example_item_name]_ml_fs.xml strictly
+    - Add dSDID in Calc_Method_Description 
     
 Requirements:
 - Files in Example folder is for reference example.
